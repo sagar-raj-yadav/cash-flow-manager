@@ -14,10 +14,7 @@ const Loan = ({ setTransactions }) => {
       date: now.toLocaleDateString(),
       mode: 'loan'
     };
-    setTransactions(prevState => [loanTransaction, ...prevState]);
-    setAmount('');
-    setcount(count+1);
-   
+
   }
 
   return (
