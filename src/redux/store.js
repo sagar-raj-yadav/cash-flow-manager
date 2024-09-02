@@ -7,15 +7,7 @@ const initialState = {
 };
 
 // Create a slice
-const balanceSlice = createSlice({
-  name: 'balance',
-  initialState,
-  reducers: {
-    setTotal: (state, action) => {
-      state.total = action.payload;
-    },
-  },
-});
+
 
 // Extract reducer and actions from the slice
 export const { setTotal } = balanceSlice.actions;
