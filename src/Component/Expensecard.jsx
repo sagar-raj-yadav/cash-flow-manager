@@ -5,7 +5,15 @@ import { useDispatch } from 'react-redux';
 import { setTotal } from "../redux/store"; 
 
 const ExpenseCard = ({ transactions, setTransactions }) => {
-    
+    const [isAddVisible, setIsAddVisible] = useState(true);
+
+    const clickonadd = () => {
+        setIsAddVisible(!isAddVisible);
+    };
+
+    const resetTransactions = () => {
+        setTransactions([]);
+    };
 
     const amounts = transactions.map(transaction => transaction.amount);
     const income = amounts.filter(item => item > 0).reduce((accumulator, item) => (accumulator + item), 0);
